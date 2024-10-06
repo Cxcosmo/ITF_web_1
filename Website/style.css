@@ -216,7 +216,7 @@ ul{
 
 footer .footer-container{
     margin: auto;
-    max-width: 1170px;
+    max-width: 1570px;
 }
 
 .footer-container .row{
@@ -225,7 +225,7 @@ footer .footer-container{
 }
 
 .footer-container .row .col{
-    width: 25%;
+    width: 30%;
     padding: 0 15px;
 }
 
@@ -293,7 +293,7 @@ footer .footer-container{
         display: block;
     }
     .mobile{
-        background-image: url("/Image/9e961f476a4b50ce2177a38d71845bfa.png");
+        background-image: url("/Website/Image/9e961f476a4b50ce2177a38d71845bfa.png");
         background-repeat: no-repeat;
         background-attachment: fixed;  
         background-size: cover;
