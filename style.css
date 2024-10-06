@@ -21,7 +21,7 @@ body{
     color: hsl(240 4.8% 95.9%);
 }
 
-header{
+.desktop header{
     position: fixed;
     top: 0;
     left: 0;
@@ -35,14 +35,14 @@ header{
     z-index: 100;
 }
 
-header a img{
+.desktop header a img{
     width: 150px;
     height: auto;
     border-radius: 20px;
     transition: 0.5s;
 }
 
-header a img:hover{
+.desktop header a img:hover{
     transform: scale(1.1);
 }
 
@@ -55,8 +55,7 @@ nav a{
     border-bottom: 3px solid transparent;
 }
 
-nav a:hover,
-nav a.active{
+nav a:hover, nav a.active{
     color: hsl(349.7 89.2% 60.2%);
     border-bottom: 3px solid hsl(349.7 89.2% 60.2%);
 }
@@ -79,7 +78,7 @@ nav button:hover{
     color: hsl(240 4.8% 95.9%);
 }
 
-section{
+.desktop section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
 }
@@ -114,15 +113,15 @@ section{
     display: flex;
     font-size: 6rem;
     font-weight: 700;
-    line-height: 1.3;
     margin-left: 3%;
+    margin-bottom: -4%;
 }
 
 .character-content h1 img{
     position: relative;
     left: 3%;
-    width: 13%;
-    transition: 0.3s ease;
+    top: -15%;
+    width: 20%;
 }
 
 .character-content h4{
@@ -226,7 +225,7 @@ footer .footer-container{
 }
 
 .footer-container .row .col{
-    width: 30%;
+    width: 25%;
     padding: 0 15px;
 }
 
@@ -250,7 +249,7 @@ footer .footer-container{
 }
 
 .col ul li{
-    margin-bottom: 15`px;
+    margin-bottom: 15px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -271,4 +270,63 @@ footer .footer-container{
 
 .row .col .social-icon a{
     scale: 85%;
+}
+
+.mobile{
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 999px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .mobile{
+        background-image: url("/Image/9e961f476a4b50ce2177a38d71845bfa.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+        background-position-x: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .mobile h1{
+        font-size: 3rem;
+        color: hsl(240 4.8% 95.9%);
+        background-color: hsl(240 10% 3.9%);
+        padding: 3%;
+        border-radius: 50px;
+        margin:10%;
+    }
+    
+    .mobile a{
+        font-size: 2rem;
+        background-color: hsl(349.7 89.2% 60.2%);
+        padding: 3%;
+        border-radius: 50px;
+        color: hsl(240 4.8% 95.9%);
+    }
+
+    .mobile a:hover{
+        transform: scale(1.1);
+        color: hsl(349.7 89.2% 60.2%);
+        background-color: hsl(355.6 100% 94.7%);
+        box-shadow: 0 0 20px hsl(349.7 89.2% 60.2%);
+    }
 }
