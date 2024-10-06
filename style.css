@@ -22,13 +22,12 @@ body{
 }
 
 header{
-    margin-top: 15px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 9%;
-    background-color: transparent;
+    padding: 1rem 3%;
+    background-color: hsl(240 10% 3.9%);
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
@@ -122,14 +121,14 @@ section{
     padding: 5rem 9% 5rem;
 }
 
-.character{
+.character-container{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
 }
 
-.character img{
+.character-container img{
     position: relative;
     width: 100vw;
     left: -45%;
@@ -137,13 +136,12 @@ section{
 
 .character-content{
     position: absolute;
-    top: 31%;
-    left: 58%;
-    width: 620px;
+    top: 25%;
+    left: 65.5%;
+    width: 470px;
     height: 250px;
-    background-color: hsl(240 10% 3.9%);
+    background-color: transparent;
     color: hsl(240 4.8% 95.9%);
-    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,13 +165,41 @@ section{
 .character-content h4{
     margin-bottom: 1rem;
     margin-left: 3%;
+    width: 470px;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.character-content h4 span::after{
+    content: "Work Smart and Rest More";
+    animation: texts-h4 35s infinite;
+}
+
+@keyframes texts-h4 {
+    0%{content: "Less Is More, Simple Is Key";}
+    25%{content: "Work Smart and Rest More";}
+    50%{content: "Work With Focus, Prevail with Caution";}
+    75%{content: "Unleash Sweet Delight, Unwrap and Indulge";}
 }
 
 .character-content h5{
-    font-size: 2rem;
     margin-bottom: 1rem;
-    font-weight: 400;
     margin-left: 3%;
+    width: 450px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.character-content h5 span::after{
+    content: "Take breaks at the right time... to minimize the annoyance of working.";
+    animation: texts-h5 35s infinite;
+}
+
+@keyframes texts-h5 {
+    0%{content: "Complexity has no place here. Just keep everything simple";}
+    25%{content: "Take breaks at the right time... to minimize the annoyance of working.";}
+    50%{content: "Whether she takes it too seriously or not seriously enough, it's her enemy who ends up suffering from it.";}
+    75%{content: "Savoring the lollipop and concealing her true thoughts.";}
 }
 
 .character-content p{
@@ -197,7 +223,7 @@ section{
     border-radius: 50%;
     color: hsl(349.7 89.2% 60.2%);
     font-size: 4rem;
-    margin: 2rem 1.5rem 3rem;
+    margin: 1rem 1.5rem 1rem;
     transition: 0.3s ease;
 }
 
@@ -208,17 +234,10 @@ section{
     box-shadow: 0 0 20px hsl(349.7 89.2% 60.2%);
 }
 
-.character .youtube{
+.character-container .youtube{
     position: absolute;
     top: 64%;
     left: 66%;
     width: 450px;
     height: 253px;
-}
-
-.typing-text{
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    margin-left: 3%;
 }
