@@ -79,43 +79,6 @@ nav button:hover{
     color: hsl(240 4.8% 95.9%);
 }
 
-@media(max-width:995px){
-    nav{
-        position: absolute;
-        top: 100%;
-        right: 0%;
-        width: 40%;
-        border-left: 3px solid hsl(345.3 82.7% 40.8%);
-        border-bottom: 3px solid hsl(345.3 82.7% 40.8%);
-        border-bottom-left-radius: 2rem;
-        padding: 1rem;
-        background-color: hsl(240 5.9% 10%);
-        border-top: 0.1rem hsl(240 5.9% 10%);
-    }
-
-    nav a.active{
-        display: block;
-    }
-
-    nav a{
-        display: block;
-        font-size: 1.8rem;
-        margin: 2rem 0;
-    }
-
-    nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid hsl(349.7 89.2% 60.2%);
-    }
-
-    nav button{
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
@@ -240,4 +203,72 @@ section{
     left: 66%;
     width: 450px;
     height: 253px;
+}
+
+footer{
+    background-color: hsl(240 3.7% 15.9%);
+    color : hsl(240 4.8% 95.9%);
+    padding: 70px 0;
+}
+
+ul{
+    list-style: none;
+}
+
+footer .footer-container{
+    margin: auto;
+    max-width: 1170px;
+}
+
+.footer-container .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-container .row .col{
+    width: 30%;
+    padding: 0 15px;
+}
+
+.col h4{
+    font-size: 2rem;
+    font-weight: 500;
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+}
+
+.col h4::before{
+    content: "";
+    position: absolute;
+    background-color: hsl(349.7 89.2% 60.2%);
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    box-sizing: border-box;
+    width: 150px;
+}
+
+.col ul li{
+    margin-bottom: 15`px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.col ul li h6{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: hsl(349.7 89.2% 60.2%);
+}
+
+.col ul li p{
+    font-size: 1.5rem;
+    font-weight: 450;
+    margin-left: 3px;
+}
+
+.row .col .social-icon a{
+    scale: 85%;
 }
