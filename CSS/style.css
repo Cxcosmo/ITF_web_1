@@ -216,7 +216,7 @@ ul{
 
 footer .footer-container{
     margin: auto;
-    max-width: 1570px;
+    max-width: 1170px;
 }
 
 .footer-container .row{
@@ -293,7 +293,7 @@ footer .footer-container{
         display: block;
     }
     .mobile{
-        background-image: url("/Image/9e961f476a4b50ce2177a38d71845bfa.png");
+        background-image: url("/Images/9e961f476a4b50ce2177a38d71845bfa.png");
         background-repeat: no-repeat;
         background-attachment: fixed;  
         background-size: cover;
