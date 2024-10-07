@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     <div class="desktop">
         <header>
@@ -24,22 +26,22 @@
             <img src="/Images/Ellen_Joe_1.png" alt="Ellen">
             <div class="character-content">
                 <h1>Ellen Joe<img src="/Images/Ellen_Joe_chibi.png" alt="Ellen_Chibi"></h1>
-                <h4><span></span></h4>
-                <h5><span></span></h5>
+                <h4><span id="quote">Work Smart and Rest More</span>|</h4>
+                <h5><span id="quote1">Take breaks at the right time... to minimize the annoyance of working.</span>|</h5>
                 <p>ITF_Lab_HTML_CSS_&_Github</p>
                 <div class="social-icon">
-                    <a href="https://www.facebook.com/profile.php?id=100021701172352"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100021701172352"><i
+                            class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com/cxcosmo_c"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://github.com/Cxcosmo"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
 
             <div class="youtube">
-                <iframe width="100%" height="100%"
-                src="https://www.youtube.com/embed/yO9-Hs7jH0I?si=TK6sb6J3ePBHx1Y7"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yO9-Hs7jH0I?si=TK6sb6J3ePBHx1Y7"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
         </section>
@@ -49,17 +51,33 @@
                     <div class="col">
                         <h4>About me</h4>
                         <ul>
-                            <li><h6>Name :</h6><p>Thanapon Sukpiboon</p></li>
-                            <li><h6>Student ID :</h6><p>67070066</p></li>
-                            <li><h6>Sec :</h6><p>1</p></li>
-                            <li><h6>Phone :</h6><p>090-079-6515</p></li>
-                            <li><h6>Email :</h6><p>Thanapon9114@gmail.com</p></li>
+                            <li>
+                                <h6>Name :</h6>
+                                <p>Thanapon Sukpiboon</p>
+                            </li>
+                            <li>
+                                <h6>Student ID :</h6>
+                                <p>67070066</p>
+                            </li>
+                            <li>
+                                <h6>Sec :</h6>
+                                <p>1</p>
+                            </li>
+                            <li>
+                                <h6>Phone :</h6>
+                                <p>090-079-6515</p>
+                            </li>
+                            <li>
+                                <h6>Email :</h6>
+                                <p>Thanapon9114@gmail.com</p>
+                            </li>
                         </ul>
                     </div>
                     <div class="col">
                         <div class="social-icon">
                             <h4>Follow me</h4>
-                            <a href="https://www.facebook.com/profile.php?id=100021701172352"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100021701172352"><i
+                                    class="fa-brands fa-facebook"></i></a>
                             <a href="https://www.instagram.com/cxcosmo_c"><i class="fa-brands fa-instagram"></i></a>
                             <a href="https://github.com/Cxcosmo"><i class="fa-brands fa-github"></i></a>
                         </div>
@@ -68,10 +86,63 @@
             </div>
         </footer>
     </div>
-
     <div class="mobile">
-        <h1>Congratulations, you found our website's secret.</Please></h1>
+        <h1>Congratulations, you found our website's secret.</Please>
+        </h1>
         <a href="https://youtu.be/dQw4w9WgXcQ?si=137w1FbesizKjKVC">Click here to receive your prize!</a>
     </div>
+    <script>
+        const quote = document.getElementById("quote");
+        const quotes = ["Less Is More, Simple Is Key", "Work Smart and Rest More", "Work With Focus, Prevail with Caution", "Unleash Sweet Delight, Unwrap and Indulge"]
+        const quote1 = document.getElementById("quote1");
+        const quotes1 = ["Complexity has no place here. Just keep everything simple.", 
+                        "Take breaks at the right time... to minimize the annoyance of working.", 
+                        "Whether she takes it too seriously or not seriously enough, it's her enemy who ends up suffering from it.",
+                        "Savoring the lollipop and concealing her true thoughts."]
+
+        function sleep(ms) {
+            return new Promise(r => setTimeout(r, ms));
+        }
+
+        async function playQuote(q, text) {
+            let display = "";
+            const playingPerC = Math.floor(3000 / text.length);
+            for (let i = 0; i < text.length; i++) {
+                display += text[i];
+                q.innerText = display;
+                await sleep(playingPerC);
+            }
+            await sleep(3000);
+            for (let i = 0; i < text.length; i++) {
+                display = text.slice(0, text.length - i);
+                q.innerText = display;
+                await sleep(Math.ceil(playingPerC / 2));
+            }
+        }
+
+        let quoteIndex = 0;
+
+        async function start() {
+            while (true) {
+                await playQuote(quote, quotes[quoteIndex]);
+                quoteIndex++;
+                if (quoteIndex >= quotes.length) {
+                    quoteIndex = 0;
+                }
+            }
+        }
+        async function start2() {
+            while (true) {
+                await playQuote(quote1, quotes1[quoteIndex]);
+                quoteIndex++;
+                if (quoteIndex >= quotes1.length) {
+                    quoteIndex = 0;
+                }
+            }
+        }
+
+        start();
+        start2();
+    </script>
 </body>
 </html>

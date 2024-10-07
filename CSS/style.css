@@ -128,40 +128,31 @@ nav button:hover{
     margin-bottom: 1rem;
     margin-left: 3%;
     width: 470px;
+    color: hsl(349.7 89.2% 60.2%);
     font-size: 4rem;
     font-weight: 500;
-}
-
-.character-content h4 span::after{
-    content: "Work Smart and Rest More";
-    animation: texts-h4 35s infinite;
-}
-
-@keyframes texts-h4 {
-    0%{content: "Less Is More, Simple Is Key";}
-    25%{content: "Work Smart and Rest More";}
-    50%{content: "Work With Focus, Prevail with Caution";}
-    75%{content: "Unleash Sweet Delight, Unwrap and Indulge";}
+    line-height: 40px;
+    animation: curser 1s infinite;
 }
 
 .character-content h5{
     margin-bottom: 1rem;
     margin-left: 3%;
     width: 450px;
+    color: hsl(349.7 89.2% 60.2%);
     font-size: 2rem;
     font-weight: 400;
+    animation: curser 1s infinite;
 }
 
-.character-content h5 span::after{
-    content: "Take breaks at the right time... to minimize the annoyance of working.";
-    animation: texts-h5 35s infinite;
+.character-content span {
+    color: hsl(240 4.8% 95.9%);
 }
 
-@keyframes texts-h5 {
-    0%{content: "Complexity has no place here. Just keep everything simple";}
-    25%{content: "Take breaks at the right time... to minimize the annoyance of working.";}
-    50%{content: "Whether she takes it too seriously or not seriously enough, it's her enemy who ends up suffering from it.";}
-    75%{content: "Savoring the lollipop and concealing her true thoughts.";}
+@keyframes curser {
+    100%{color: 100%;}
+    50%{color: transparent;}
+    0%{color: 100%;}
 }
 
 .character-content p{
