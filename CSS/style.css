@@ -90,10 +90,12 @@ nav button:hover{
     gap: 8rem;
 }
 
-.character-container img{
+.character-container img {
     position: relative;
-    width: 100vw;
-    left: -45%;
+    width: fit-content;
+    scale: 80%;
+    top : -110px;
+    left: -44%;
 }
 
 .character-content{
@@ -206,7 +208,7 @@ ul{
 }
 
 footer .footer-container{
-    margin: auto;
+    margin: ;
     max-width: 1170px;
 }
 
@@ -216,8 +218,8 @@ footer .footer-container{
 }
 
 .footer-container .row .col{
-    width: 30%;
-    padding: 0 15px;
+    width: 40%;
+    padding: 0 5%;
 }
 
 .col h4{
