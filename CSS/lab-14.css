@@ -60,8 +60,63 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
     font-size: 3rem;
+}
+
+:root {
+    --w: 700px;
+    --h: 100px;
+    --strokeWidth: 3px;
+}
+
+.heart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.pulse {
+    height: var(--h);
+    width: var(--w);
+    overflow: hidden;
+    position: absolute;
+    margin: auto;
+
+    /* heartbeat gfx */
+    &:after {
+        content: '';
+        display: block;
+        background: url(/Svg/Pulse.svg) 0 0 no-repeat;
+        width: 100%; 
+        height: 100%;
+        position: absolute;
+        animation: pulse 2s infinite linear;
+    }
+
+    /* flat opaque line */
+    &:before { 
+        content: ''; 
+        position: absolute; 
+        z-index: -1; 
+        left: 2px; 
+        right: 2px; 
+        bottom: 0; 
+        top: 16px; 
+        margin: auto; 
+        height: var(--strokeWidth); 
+    }
+}
+
+@keyframes pulse {
+    0%   { clip: rect(0, 0, var(--h), 0); }
+    10%  { clip: rect(0, calc(var(--w) / 3), var(--h), 0); } 
+    38%  { clip: rect(0, calc(var(--w) / 1.5), var(--h), 0); }
+    48%  { clip: rect(0, var(--w), var(--h), 0); }
+    50%  { clip: rect(0, var(--w), var(--h), 0); }
+    62%  { clip: rect(0, var(--w), var(--h), calc(var(--w) / 3)); }
+    90%  { clip: rect(0, var(--w), var(--h), calc(var(--w) / 1.5)); }
+    100% { clip: rect(0, var(--w), var(--h), var(--w)); }
 }
 
 .set_phone_num{
