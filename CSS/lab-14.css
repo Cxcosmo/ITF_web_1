@@ -1,0 +1,131 @@
+section .user_info{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(240 4.8% 95.9%);
+    gap: 3rem;
+}
+
+.user_info h1{
+    font-size: 3rem;
+}
+
+.user_info h1 a{
+    color: hsl(349.7 89.2% 60.2%);
+}
+
+.user_info h1 a:hover{
+    color: hsl(240 4.8% 95.9%);
+    text-shadow: 0 0 20px hsl(349.7 89.2% 60.2%);
+}
+
+.user_info .profile_image img{
+    position: relative;
+    width: 183px;
+    height: 183px;
+    border-radius: 50%;
+    background-color: hsl(240 5.9% 10%);
+}
+
+.user_info .profile_image p{
+    font-size: 2rem;
+    font-weight: 500;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 130px;
+    margin-top: -40px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: hsl(349.7 89.2% 60.2%);
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.phone_head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.set_phone_num{
+    display: flex;
+    align-items: end;
+}
+
+.set_phone_num h2{
+    font-weight: 500;
+}
+
+input{
+    height: 35px;
+    width: auto;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: hsl(240 4.8% 95.9%);
+    background-color: hsl(240 5.9% 10%);
+    border: 1.5px solid hsl(240 4.8% 95.9%);
+}
+
+section button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: hsl(240 4.8% 95.9%);
+    background-color: hsl(349.7 89.2% 60.2%);
+    height: 35px;
+    width: 90px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+section button:hover{
+    color: hsl(349.7 89.2% 60.2%);
+    background-color: hsl(240 4.8% 95.9%);
+    transform: scale(1.1);
+}
+
+table{
+    font-size: 2rem;
+    width: 700PX;
+    border: 2px solid hsl(240 4.8% 95.9%);
+    border-radius: 15px;
+    
+}
+
+tr .first{
+    width: 5rem;
+}
+
+tr .middle{
+    border-left: 2px solid hsl(240 4.8% 95.9%);
+    border-right: 2px solid hsl(240 4.8% 95.9%);
+}
+
+th{
+    border-bottom: 2px solid hsl(240 4.8% 95.9%);
+}
+
+td{
+    padding-left: 2rem;
+}
